@@ -1,4 +1,4 @@
-import './App.css'
+import "./App.css";
 import AppNavBar from "./AppNavBar";
 // assets 폴더 내의 이미지 사용법 -> import 해서 사용
 import bg_png from "./assets/images/bg.png"
@@ -55,4 +55,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
