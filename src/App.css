@@ -1,0 +1,8 @@
+.main-bg{
+height: 300px;
+/* 퍼블릭 폴더에 있는 이미지 절대 참조 */
+background-image: url('/public/images/bg.jpg');
+background-size: cover;
+background-position: center;
+
+}
