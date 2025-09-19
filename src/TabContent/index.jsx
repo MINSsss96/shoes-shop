@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
+import DetailInfo from "../TabInfo/DetailInfo";
+import SizeGuide from "../TabInfo/SizeGuide";   // ✅ 추가
+import Shipping from "../TabInfo/Shipping";
 
-function TabContent({ tabState }) {
+function TabContent({ tabState, product }) {
 
   // fade 값으로 css를 지정하도록 함
   let [fade, setFade] = useState('')
@@ -23,9 +26,9 @@ function TabContent({ tabState }) {
   return (
     <div className= {`ani_start ${fade}`}>
          {[
-      <div> 내용1</div>,
-      <div> 내용2</div>,
-      <div> 내용3</div>,
+        <DetailInfo product={product} />,   // 버튼1 눌렀을 때
+        <SizeGuide />,                      // 버튼2 → SizeGuide
+        <Shipping />                 // 버튼3 눌렀을 때
     ][tabState]}
     </div>
   )
