@@ -6,8 +6,14 @@ import './AppNavBar.css'
 // Link : 실제로 페이지를 보여주는 역할, Link위치에 컴포넌트 뿌려줌
 // userNavigate : 스크립트 영역에서 링크처리를 하는 훅
 import { Link, useNavigate } from "react-router-dom";
+import { UserContext } from "../Context/UserContext";
+import { useContext } from "react";
 
 function AppNavBar(){
+
+    // Context에 저장되어 있는 정보를 변수에 담는 작업
+  const {loginUser} = useContext(UserContext);
+  console.log(loginUser)
 
   const navigate = useNavigate();
 
@@ -25,6 +31,9 @@ function AppNavBar(){
                 <NavDropdown.Item onClick={()=>{navigate('/about/member')}}>Member</NavDropdown.Item>
                 <NavDropdown.Item onClick={()=>{navigate('/about/location')}}>Location</NavDropdown.Item>
               </NavDropdown>
+            </Nav>
+            <Nav className="ms-auto align-items-center">
+              <Nav.Link as="span">{`${loginUser.name}`}</Nav.Link>
             </Nav>
           </Container>
         </Navbar>

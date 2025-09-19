@@ -11,6 +11,8 @@ function App() {
   // 상품정보를 갖는 product 스테이트를 만든다.
   const [product, setProduct] = useState(data);
 
+
+
   // ✅ 데이터 로딩 횟수를 추적하는 state
   const [dataLoadingCount, setDataLoadingCount] = useState(0);
 
