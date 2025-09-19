@@ -99,21 +99,21 @@ function Detail({product}){
         <Nav.Item>
           <Nav.Link eventKey="link-0" 
               onClick={()=>{setTabState(0)}}>
-            버튼1</Nav.Link>
+            특징</Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link eventKey="link-1" 
             onClick={()=>{setTabState(1)}}>
-            버튼2</Nav.Link>
+            사이즈</Nav.Link>
         </Nav.Item>
         <Nav.Item>
           <Nav.Link eventKey="link-2" 
             onClick={()=>{setTabState(2)}}>
-            버튼3</Nav.Link>
+            배송</Nav.Link>
         </Nav.Item>
       </Nav>
       {/* 선택한 탭의 내용이 표시되는 공간 */}
-      <TabContent tabState={tabState} />
+      <TabContent tabState={tabState} product={findProduct}/>
     </div>
   )
 }
