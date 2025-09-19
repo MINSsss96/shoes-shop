@@ -70,9 +70,9 @@ function Detail({ product }) {
           <p>{findProduct.content}</p>
           <p>{findProduct.price}</p>
           {/* 로그인 사용자의 이메일 출력 */}
-          <p>
+          {/* <p>
             {loginUser.email}
-          </p>
+          </p> */}
           <p>
             ⭐ 평균: <span className="text-warning">{renderAvgStars(reviewStats.avg)}</span>
             ({reviewStats.avg}점 / {reviewStats.count}개 리뷰)
