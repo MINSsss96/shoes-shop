@@ -1,11 +1,16 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Discount from "../Discount";
 import Nav from 'react-bootstrap/Nav';
 import TabContent from "../TabContent";
 import Review from "../Review";
+import { UserContext } from "../Context/UserContext";
+
 
 function Detail({ product }) {
+
+  const {loginUser} = useContext(UserContext);
+
   const [detailFade, setDetailFade] = useState('');
   const [showAlert, setShowAlert] = useState(true);
   const [tabState, setTabState] = useState(0);
@@ -64,6 +69,10 @@ function Detail({ product }) {
           <h4 className="pt-5">{findProduct.title}</h4>
           <p>{findProduct.content}</p>
           <p>{findProduct.price}</p>
+          {/* 로그인 사용자의 이메일 출력 */}
+          <p>
+            {loginUser.email}
+          </p>
           <p>
             ⭐ 평균: <span className="text-warning">{renderAvgStars(reviewStats.avg)}</span>
             ({reviewStats.avg}점 / {reviewStats.count}개 리뷰)
