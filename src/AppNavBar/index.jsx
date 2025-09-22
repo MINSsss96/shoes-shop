@@ -18,9 +18,9 @@ function AppNavBar(){
   // console.log(loginUser)
 
   // store 에서 정보 가져오기(zustand)
-  const {userName, productStock} = userStore();
+  const {userName, productStock, changeName, addProduct, productName} = userStore();
 
-  console.log(userName);
+  console.log(productName);
   console.log(productStock);
 
   const navigate = useNavigate();
@@ -41,7 +41,14 @@ function AppNavBar(){
               </NavDropdown>
             </Nav>
             <Nav className="ms-auto align-items-center">
-              <Nav.Link as="span">{`${userName}`}</Nav.Link>
+
+              <Nav.Link as="span"
+              onClick={()=>{
+                changeName()
+                addProduct('르무통', 5)
+              }}>
+                유저변경</Nav.Link>
+              <Nav.Link as="span">{`${userName}님 로그인 됨`}</Nav.Link>
             </Nav>
           </Container>
         </Navbar>
