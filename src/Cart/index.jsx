@@ -51,7 +51,7 @@ function Cart() {
 
   // 데이터 추가 단추 클릭 함수
   const handleAdd = ()=>{
-    addItem(form)
+    addItem(form);
     clearForm();
   }
 
