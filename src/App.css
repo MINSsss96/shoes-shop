@@ -1,19 +1,35 @@
-.main-bg{
-height: 300px;
-/* 퍼블릭 폴더에 있는 이미지 절대 참조 */
-background-image: url('/public/images/bg.jpg');
-background-size: cover;
-background-position: center;
+.main-bg {
+  height: 300px;
+  /* 퍼블릭 폴더에 있는 이미지 절대 참조 */
+  background-image: url('/public/images/bg.jpg');
+  background-size: cover;
+  background-position: center;
 
 }
 
-.ani start{
+.ani start {
   /* 요소를 완전히 투명하게 시작 */
   opacity: 0;
 }
 
-.ani end{
+.ani end {
   /* 요소를 완전히 보이게 */
   opacity: 1;
   transition: opacity 0.5s;
+}
+
+.userInfoArea {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+}
+
+.userImage {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: block;
+  margin-right: 10px;
+
 }
